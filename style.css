@@ -142,8 +142,8 @@
     left: 0.5em;
   } 
   
-  /*todos estos comandos nos dejan ver toas las columnas
-  la galeria*/
+  /*todos estos comandos nos dejan ver todas las columnas la galeria
+  y desplazarme entre ellas*/
   .galeria
     input[type="radio"]:nth-of-type(1):checked
     ~ .contenedor-imagen:nth-of-type(1) 
@@ -195,6 +195,7 @@ td{
     text-align: center;
 }
 
+/*ancho de columnas*/
 table td:first-child {
     width: 100px;
   }
