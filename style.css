@@ -73,11 +73,91 @@
     justify-content: space-evenly;
   }
 
+  /*imagen en la mitad de la seccion*/
   .imagen-acerca-de-mi {
     width: 30%;
   }
   
+  /*texto en la mitad de la seccion*/
   .clase-acerca-de-mi .texto-acerca-de-mi {
     width: 48%;
     text-align: middle;
+  }
+
+  /*estilo de la galeria (dimensiones, borde y posicion)*/
+  .galeria {
+    height: calc(300px + 3em);
+    width: 80vw;
+    margin: 1em auto;
+    border: 1px solid #555;
+    position: relative;
+  }
+  
+  /*formato a las divisiones dentro de la galeria*/
+  .galeria div {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: display 3s;
+    width: 100%;
+  }
+  
+  /*formato al texto dentro de la galeria*/
+  .galeria div .contenedor-texto {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+      width: 50%;
+    }
+
+  /*formato a las columas divisoras*/
+  .galeria div .espacio {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 5%;
+    }
+
+  /*posicionamiento de los botones de la galeria*/
+  .galeria input[type="radio"] {
+    position: relative;
+    bottom: calc(-300px - 1.5em);
+    left: 0.5em;
+  } 
+  
+  /*todos estos comandos nos dejan ver toas las columnas
+  la galeria*/
+  .galeria
+    input[type="radio"]:nth-of-type(1):checked
+    ~ .contenedor-imagen:nth-of-type(1) 
+    {
+    display: flex;
+     flex-direction: row;
+  }
+  
+  .galeria
+    input[type="radio"]:nth-of-type(2):checked
+    ~ .contenedor-imagen:nth-of-type(2) {
+    display: flex;
+  }
+  
+  .galeria
+    input[type="radio"]:nth-of-type(3):checked
+    ~ .contenedor-imagen:nth-of-type(3) {
+    display: flex;
+  }
+  
+  .galeria
+    input[type="radio"]:nth-of-type(4):checked
+    ~ .contenedor-imagen:nth-of-type(4) {
+    display: flex;
+  }
+  
+  .galeria
+    input[type="radio"]:nth-of-type(5):checked
+    ~ .contenedor-imagen:nth-of-type(5) {
+    display: flex;
   }
